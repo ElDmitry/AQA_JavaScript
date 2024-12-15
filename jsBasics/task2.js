@@ -1,8 +1,21 @@
-let name1 = 'John';
-let name2 = 'Peter';
+let averageGrade = 59;
 
-let concat = 'Hello, ' + name1 + ' and ' + name2;
-console.log(concat);
-
-let greeting = `Greeting ${name1} and ${name2}`;
-console.log(greeting);
+switch(true){
+    case averageGrade < 60:
+        console.log('Незадовільно')
+        break;
+    case averageGrade >= 60 && averageGrade <= 70:
+        console.log('Задовільно')
+        break;
+    case averageGrade >= 71 && averageGrade <= 80:
+        console.log('Добре')
+        break;
+    case averageGrade >= 81 && averageGrade <= 90:
+        console.log('Дуже добре')
+        break;
+    case averageGrade >= 91 && averageGrade <= 100:
+        console.log('Відмінно')
+        break;
+    default:
+        console.log("Невірна оцінка")
+}
