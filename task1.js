@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { expect } from 'chai';
 
 const BASE_URL = 'https://jsonplaceholder.typicode.com';
 
@@ -10,8 +9,6 @@ class GetRequest {
     async request() {
         try {
             const response = await axios.get(this.url);
-            expect (response.status).to.equal(200);
-            expect (response.data).to.not.be.empty;
             return response.data;
         }
         catch(error) {
@@ -20,6 +17,8 @@ class GetRequest {
         };
     };
 };
+
+module.exports = request;
 
 class PostRequest {
     constructor(url, params) {
@@ -34,8 +33,6 @@ class PostRequest {
                     "Content-Type": "application/json"
                 }
             });     
-            expect (response.status).to.equal(201)
-            expect(response.data).to.include(params);
             return response.data;
         }
         catch(error) {

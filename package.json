@@ -16,9 +16,11 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@eslint/js": "^9.18.0",
+		"@faker-js/faker": "^9.4.0",
 		"eslint": "^9.18.0",
 		"globals": "^15.14.0",
 		"husky": "^9.1.7",
+		"jest-html-reporters": "^3.1.7",
 		"prettier": "3.4.2"
 	}
 }
